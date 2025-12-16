@@ -5,13 +5,13 @@
 class Kv < Formula
   desc "A lightweight, feature-rich command-line key-value store with encryption, TTL, and version control"
   homepage "https://github.com/AmrSaber/kv"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.1.4/kv_0.1.4_Darwin_x86_64.tar.gz"
-      sha256 "8e3c4dfe159bbaa1094c14537e04f2296ede1a4e0e816a7dabaa1797b144bb2f"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.2.0/kv_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "4fbacf79d8c02b7826403aaa4398e45b98ec0af625f7ad5de5a66044fa50b0d7"
 
       def install
         bin.install "kv"
@@ -23,8 +23,8 @@ class Kv < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.1.4/kv_0.1.4_Darwin_arm64.tar.gz"
-      sha256 "0a9fd113d0c5f8d66226664fca37acfaab5a20a223c10c15d49e8fff4d6b3d67"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.2.0/kv_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "cce8fcb52dfd35717da013bebc42916b0ea4e5caec7f0b9ced02b4741a26fdb2"
 
       def install
         bin.install "kv"
@@ -39,8 +39,8 @@ class Kv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.1.4/kv_0.1.4_Linux_x86_64.tar.gz"
-      sha256 "ffd6b395a77ef53fcb4d17913d296b4084f15570a3a82eae0ca4323f0c2e8599"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.2.0/kv_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "2d490c1ccf51094a23b23e0f4b72bc442c58b359ac73fbe4985d779595173598"
       def install
         bin.install "kv"
 
@@ -51,8 +51,8 @@ class Kv < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.1.4/kv_0.1.4_Linux_arm64.tar.gz"
-      sha256 "fcea750e2d340814a63444670103ef1ac2c19595b20e9aabb02da73615ae4936"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.2.0/kv_0.2.0_Linux_arm64.tar.gz"
+      sha256 "5a409ea22bd7e2d2ed0d4ba8c76372d4a2ef1c27695c9e715ffc73db3fa140e5"
       def install
         bin.install "kv"
 
