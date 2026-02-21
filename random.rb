@@ -5,21 +5,21 @@
 class Random < Formula
   desc "CLI tool to generate random data"
   homepage "https://github.com/AmrSaber/random"
-  version "3.0.1"
+  version "3.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.1/random_3.0.1_darwin_amd64.tar.gz"
-      sha256 "6846cfdbd00ce9925398cd7462a3105c4f84c72afc487a103298baa0ba5fbb9f"
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_darwin_amd64.tar.gz"
+      sha256 "059549ffae322a14b0154e6e2e6ae90127818ad3fec9edc88abf04a4d9e0251e"
 
       def install
         bin.install "random"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.1/random_3.0.1_darwin_arm64.tar.gz"
-      sha256 "7d23efcba0174b3d9eafd49e2bb58b3b87d558f40d6e4ef0f4803679a444e463"
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_darwin_arm64.tar.gz"
+      sha256 "2857d62b7ca6b0e888f2052f9fcae40886de6f379318dc8789ce081bc3209960"
 
       def install
         bin.install "random"
@@ -29,15 +29,15 @@ class Random < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.1/random_3.0.1_linux_amd64.tar.gz"
-      sha256 "410598f5cabf4fdfad31333d8905a1292c0d323a111d0872389590d9340a8a27"
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_linux_amd64.tar.gz"
+      sha256 "c63a5901f1e50496a705a2101a40b38b0c993b6034c3d2af3a9b8b0c864a81f1"
       def install
         bin.install "random"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.1/random_3.0.1_linux_arm64.tar.gz"
-      sha256 "7e3640bf0ba715da9337bad4f56ee1a398773f2000d8fde9768235cfa3a2d2c6"
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_linux_arm64.tar.gz"
+      sha256 "83c0666940504ac8b2e3ac32ea631a8882421179d9ec8a19944a80021a92f5b8"
       def install
         bin.install "random"
       end
