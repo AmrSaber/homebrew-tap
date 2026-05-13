@@ -5,13 +5,13 @@
 class Kv < Formula
   desc "A lightweight, feature-rich command-line key-value store with encryption, TTL, and version control"
   homepage "https://github.com/AmrSaber/kv"
-  version "0.6.1"
+  version "0.6.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.6.1/kv_0.6.1_Darwin_x86_64.tar.gz"
-      sha256 "901c024f44c88690f72c54d6cb15066e68c5dc0c0c86805dae0b41bcdb9e5a3a"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.6.2/kv_0.6.2_Darwin_x86_64.tar.gz"
+      sha256 "621a50fc8647ded6e6d03c8531cac843aee353150eaa2a31f55c894844637df5"
 
       define_method(:install) do
         bin.install "kv"
@@ -23,8 +23,8 @@ class Kv < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.6.1/kv_0.6.1_Darwin_arm64.tar.gz"
-      sha256 "d523284b0d96f100482b5cd0ef1b33d1cc21ed97a8e6fa975541313a0914623a"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.6.2/kv_0.6.2_Darwin_arm64.tar.gz"
+      sha256 "bb16781f8e781b7ea78ab8e8f2b0f5956608812529a73b33ad07d73b54b09a9b"
 
       define_method(:install) do
         bin.install "kv"
@@ -39,8 +39,8 @@ class Kv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.6.1/kv_0.6.1_Linux_x86_64.tar.gz"
-      sha256 "d4386c8ec7c0f6fc39fb7969e87951ad6847a54b82f2e3c24b2f1e8b47526192"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.6.2/kv_0.6.2_Linux_x86_64.tar.gz"
+      sha256 "f2ca6f6db01cd6ef8ce658f257674d5f9dc6496392c7265b0fd7b17367ea5a48"
       define_method(:install) do
         bin.install "kv"
 
@@ -51,8 +51,8 @@ class Kv < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/kv/releases/download/v0.6.1/kv_0.6.1_Linux_arm64.tar.gz"
-      sha256 "41c90979fb88c2e6db6d16e599bcd06aa3cb5860bca50005459266c567b5f15d"
+      url "https://github.com/AmrSaber/kv/releases/download/v0.6.2/kv_0.6.2_Linux_arm64.tar.gz"
+      sha256 "e608c7d73fb6f00ab2afb5537a27240b6c7b5c05f9454dae6f6183a6a1b48d86"
       define_method(:install) do
         bin.install "kv"
 
