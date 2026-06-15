@@ -5,23 +5,23 @@
 class Random < Formula
   desc "CLI tool to generate random data"
   homepage "https://github.com/AmrSaber/random"
-  version "3.0.2"
+  version "3.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_darwin_amd64.tar.gz"
-      sha256 "059549ffae322a14b0154e6e2e6ae90127818ad3fec9edc88abf04a4d9e0251e"
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.3/random_3.0.3_darwin_amd64.tar.gz"
+      sha256 "c0748a2648c1a43a11d97da865be3e85193e96682424718ce80427ae2bb17fd1"
 
-      def install
+      define_method(:install) do
         bin.install "random"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_darwin_arm64.tar.gz"
-      sha256 "2857d62b7ca6b0e888f2052f9fcae40886de6f379318dc8789ce081bc3209960"
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.3/random_3.0.3_darwin_arm64.tar.gz"
+      sha256 "52430e3adc1df80bacf5b76a90330c711aa23e6f5e1f8066dbb10e7277874300"
 
-      def install
+      define_method(:install) do
         bin.install "random"
       end
     end
@@ -29,16 +29,16 @@ class Random < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_linux_amd64.tar.gz"
-      sha256 "c63a5901f1e50496a705a2101a40b38b0c993b6034c3d2af3a9b8b0c864a81f1"
-      def install
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.3/random_3.0.3_linux_amd64.tar.gz"
+      sha256 "e43e142ab91440e27968c2bbf7485232b75ec9f3b089db5a3667a9874d361bc7"
+      define_method(:install) do
         bin.install "random"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/random/releases/download/v3.0.2/random_3.0.2_linux_arm64.tar.gz"
-      sha256 "83c0666940504ac8b2e3ac32ea631a8882421179d9ec8a19944a80021a92f5b8"
-      def install
+      url "https://github.com/AmrSaber/random/releases/download/v3.0.3/random_3.0.3_linux_arm64.tar.gz"
+      sha256 "674c6d061b320d95fefbe2c2c7a8103926b2416c94af05ed7125635eb997f4ca"
+      define_method(:install) do
         bin.install "random"
       end
     end
