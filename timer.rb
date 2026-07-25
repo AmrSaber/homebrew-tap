@@ -5,21 +5,21 @@
 class Timer < Formula
   desc "A simple command-line timer"
   homepage "https://github.com/AmrSaber/timer"
-  version "1.3"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AmrSaber/timer/releases/download/v1.3/timer_1.3_Darwin_x86_64.tar.gz"
-      sha256 "af033f04de2c0b75dceeed8744dc793d41327bce9db2dc2279f9718896575f9e"
+      url "https://github.com/AmrSaber/timer/releases/download/v1.3.1/timer_1.3.1_Darwin_x86_64.tar.gz"
+      sha256 "b9afacbf328b5ab6bdd122f48bb6dd26ecdfee21a8f64a3de7e1562974106d2b"
 
       define_method(:install) do
         bin.install "timer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AmrSaber/timer/releases/download/v1.3/timer_1.3_Darwin_arm64.tar.gz"
-      sha256 "36c549492f09aee91a04f2b71adab5a5bcbac0e00dc9c870c876ab5edd4dc140"
+      url "https://github.com/AmrSaber/timer/releases/download/v1.3.1/timer_1.3.1_Darwin_arm64.tar.gz"
+      sha256 "dc4f43c1d31149240d7ffdd1ef96f9cfd9aa9f8049bdde6974f7939bf5844365"
 
       define_method(:install) do
         bin.install "timer"
@@ -29,22 +29,22 @@ class Timer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/timer/releases/download/v1.3/timer_1.3_Linux_x86_64.tar.gz"
-      sha256 "d08d111d5c0d40ddceb58c376156c8b9696a266ef5ee1a5be4d6aacc66a796ec"
+      url "https://github.com/AmrSaber/timer/releases/download/v1.3.1/timer_1.3.1_Linux_x86_64.tar.gz"
+      sha256 "90bb474ac4be77e90feaeb884ebcb160278197c8751b1263be60f5b659edd394"
       define_method(:install) do
         bin.install "timer"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/timer/releases/download/v1.3/timer_1.3_Linux_armv6.tar.gz"
-      sha256 "dafc7d6c86be06cdff0fda8bf7a1589ed6be6f28abafbcb857f5158eecc9bceb"
+      url "https://github.com/AmrSaber/timer/releases/download/v1.3.1/timer_1.3.1_Linux_armv6.tar.gz"
+      sha256 "5818dcfecf97d30bb7c4c4fcfeef50e4fcf592bcf96d6530a7d4f28fc4dc70e2"
       define_method(:install) do
         bin.install "timer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AmrSaber/timer/releases/download/v1.3/timer_1.3_Linux_arm64.tar.gz"
-      sha256 "a008347cdff943e31d272601a5c527cd55e2d608713b8a83871bec94a638f091"
+      url "https://github.com/AmrSaber/timer/releases/download/v1.3.1/timer_1.3.1_Linux_arm64.tar.gz"
+      sha256 "78d5384eb6c4c1cbc62d904c5c6896ff03c054a2ee1fdd1fb11d7044b8826ca6"
       define_method(:install) do
         bin.install "timer"
       end
@@ -52,6 +52,6 @@ class Timer < Formula
   end
 
   test do
-    system "#{bin}/timer", "0"
+    system "#{bin}/timer", "--version"
   end
 end
